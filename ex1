@@ -1,0 +1,47 @@
+
+mark={}
+def input_student():
+n=int(input("so hoc sinh"))
+for_ in range(n):
+sid=input("id")
+name=input("ten")
+dob=input("DoB")
+students.append({"id" sid, "ten" name,"dob" dob})
+def input_course():
+n=int(input("so luong course"))
+for_in range(n):
+cid=input("course ID")
+name= input("course name")
+course.append({"id",cid, "name" name})
+def input_marks():
+cid = input("Course ID to input marks: ")
+marks[cid] = {}
+for s in students:
+m = float(input(f"Mark for {s['name']}: "))
+marks[cid][s["id"]] = m
+
+def list_students():
+for s in students:
+print(s["id"], s["name"], s["dob"])
+def list_courses():
+for c in courses:
+print(c["id"], c["name"])
+
+def show_marks():
+cid = input("Course ID: ")
+if cid not in marks:
+print("No marks.")
+return
+for s in students:
+sid = s["id"]
+print(s["name"], ":", marks[cid].get(sid, "No mar>
+while True:
+print(
+1. Input students
+2. Input courses
+3. Input marks
+4. List students
+5. List courses
+6. Show marks
+0. Exit
+)
